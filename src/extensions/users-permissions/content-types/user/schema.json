@@ -82,6 +82,9 @@
       "relation": "manyToOne",
       "target": "api::branch.branch",
       "inversedBy": "users"
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }

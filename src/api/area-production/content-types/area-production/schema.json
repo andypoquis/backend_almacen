@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "area_productions",
+  "info": {
+    "singularName": "area-production",
+    "pluralName": "area-productions",
+    "displayName": "area_production"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "state": {
+      "type": "boolean"
+    },
+    "warehouse": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::warehouse.warehouse",
+      "inversedBy": "area_productions"
+    }
+  }
+}

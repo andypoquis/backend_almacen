@@ -26,6 +26,12 @@
       "relation": "oneToMany",
       "target": "plugin::users-permissions.user",
       "mappedBy": "branch"
+    },
+    "warehouses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::warehouse.warehouse",
+      "mappedBy": "branch"
     }
   }
 }

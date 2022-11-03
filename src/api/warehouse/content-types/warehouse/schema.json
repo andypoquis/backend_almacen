@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "warehouses",
+  "info": {
+    "singularName": "warehouse",
+    "pluralName": "warehouses",
+    "displayName": "warehouse",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "stock_control": {
+      "type": "boolean"
+    },
+    "state": {
+      "type": "boolean",
+      "default": true
+    },
+    "branch": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::branch.branch",
+      "inversedBy": "warehouses"
+    },
+    "area_productions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::area-production.area-production",
+      "mappedBy": "warehouse"
+    }
+  }
+}
