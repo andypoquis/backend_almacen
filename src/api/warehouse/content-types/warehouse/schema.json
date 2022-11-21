@@ -33,6 +33,12 @@
       "relation": "oneToMany",
       "target": "api::area-production.area-production",
       "mappedBy": "warehouse"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "warehouse"
     }
   }
 }

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "role_users",
+  "info": {
+    "singularName": "role-user",
+    "pluralName": "role-users",
+    "displayName": "role-user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "role_users"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "role_user"
+    },
+    "state": {
+      "type": "boolean"
+    }
+  }
+}

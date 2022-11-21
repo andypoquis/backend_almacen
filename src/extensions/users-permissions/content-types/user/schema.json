@@ -85,6 +85,12 @@
     },
     "phone": {
       "type": "string"
+    },
+    "role_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::role-user.role-user",
+      "inversedBy": "users"
     }
   }
 }
