@@ -20,6 +20,20 @@
     },
     "address": {
       "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    "responsible": {
+      "type": "string"
+    },
+    "commercial_reason": {
+      "type": "string"
     }
   }
 }
